@@ -92,15 +92,57 @@ var AppBranding = (function(){
             }
 
             if( ready ){
+
+                // Update the HTML example and then use it to build the PNG and SVG
+                var cmonth = elems.form['cmonth'].value;
+                var cyear = elems.form['cyear'].value;
+                var name = elems.form['name'].value;
+                var tmpInitials = name;
+                tmpInitials = tmpInitials.replace(/\[[^)]*\]/g, '');
+                tmpInitials.split(' ');
+                var initials = '';
+                for( var x = 0; x < tmpInitials.length; x++ ){
+                    if( x > 2 ){
+                        break;
+                    }
+                    initials += tmpInitials[x][0];
+                }
+                initials = initials.toLowerCase();
+                initials = initials.charAt(0).toUpperCase() + initials.slice(1);
+                name = name.replace(/\[|\]/g, '');
+                var umonth = elems.form['umonth'].value;
+                var uyear = elems.form['uyear'].value;
+                var tmpVersion = elems.form['version'].value;
+                tmpVersion = tmpVersion.split('.');
+                if( tmpVersion.length == 3 ){
+                    if( parseInt( tmpVersion[0] ) > 0 ){
+                        version = tmpVersion[0] + '.' + tmpVersion[1] + '.' + tmpVersion[2];
+                    } else if ( parseInt( tmpVersion[1] ) > 0 ) {
+                        version = 'Beta: ' + tmpVersion[1];
+                    } else {
+                        version = 'Alpha: ' + tmpVersion[2];
+                    }
+                } else {
+                    version = '???';
+                }
+
+                // TODO: add validation!
+
+                elems.template['html-cdate'].innerHTML = cmonth + cyear;
+                elems.template['html-udate'].innerHTML = umonth + uyear;
+                elems.template['html-initials'].innerHTML = initials;
+                elems.template['html-name'].innerHTML = name;
+                elems.template['html-version'].innerHTML = version;
+
                 html2canvas(
                     elems.template['html-badge'], {
                         backgroundColor: 'rgb(255, 255, 255, 0)'
                     }
                 ).then( canvas => {
                     var svg = document.createElement( 'img' );
-                    // get base64 encoded png data url from Canvas
+                    // Get base64 encoded png data url from Canvas
                     svg.src = canvas.toDataURL("image/png");
-
+                    // Display to user
                 	document.getElementById('canvas-brand').innerHTML = '';
                 	document.getElementById('canvas-brand').appendChild( canvas );
                 	document.getElementById('svg-brand').innerHTML = '';
