@@ -8,3 +8,4 @@ This application allows users to easily create the branding for a Caboodle Tech 
 # TODO:
 - Add proper color (orange)
 - Comment code
+- Test 2FA
