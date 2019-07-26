@@ -1,7 +1,5 @@
 var AppBranding = (function(){
 
-    //var domtoimage = require('dom-to-image');
-
     var block = false;
     var form = [ 'cmonth', 'cyear', 'name', 'umonth', 'uyear', 'version' ];
     var template = [ 'html-badge', 'html-cdate', 'html-udate', 'html-initials', 'html-name', 'html-version', 'html-badge-black', 'html-cdate-black', 'html-udate-black', 'html-initials-black', 'html-name-black', 'html-version-black' ];
@@ -187,43 +185,6 @@ var AppBranding = (function(){
                 .catch(function (error) {
                     console.error('oops, something went wrong!', error);
                 });
-
-/*
-                html2canvas(
-                    document.getElementById('html-badge'), {
-                        backgroundColor: 'rgb(255, 255, 255, 0)'
-                    }
-                ).then( canvas => {
-                    var svg = document.createElement( 'img' );
-                    // Get base64 encoded png data url from Canvas
-                    svg.src = canvas.toDataURL("image/png");
-                    // Display to user
-                	document.getElementById('canvas-brand').innerHTML = '';
-                	document.getElementById('canvas-brand').appendChild( canvas );
-                	document.getElementById('svg-brand').innerHTML = '';
-                	document.getElementById('svg-brand').appendChild( svg );
-                } );
-
-                elems.template['html-cdate-black'].innerHTML = cmonth + cyear;
-                elems.template['html-udate-black'].innerHTML = umonth + uyear;
-                elems.template['html-initials-black'].innerHTML = initials;
-                elems.template['html-name-black'].innerHTML = name;
-                elems.template['html-version-black'].innerHTML = version;
-/*
-                html2canvas(
-                    elems.template['html-badge-black'], {
-                        backgroundColor: 'rgb(255, 255, 255, 0)'
-                    }
-                ).then( canvas => {
-                    var svg = document.createElement( 'img' );
-                    // Get base64 encoded png data url from Canvas
-                    svg.src = canvas.toDataURL("image/png");
-                    // Display to user
-                	document.getElementById('canvas-brand-black').innerHTML = '';
-                	document.getElementById('canvas-brand-black').appendChild( canvas );
-                	document.getElementById('svg-brand-black').innerHTML = '';
-                	document.getElementById('svg-brand-black').appendChild( svg );
-                } );*/
             }
 
             block = false;

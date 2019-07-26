@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Demo</title>
-    <meta name="description" content="">
+    <title>Caboodle Tech App Branding</title>
+    <meta name="description" content="This application allows users to easily create the branding for a Caboodle Tech Inc module or application.">
     <meta name="author" content="Caboodlet Tech Inc.">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/app-branding.js"></script>
-    <script src="js/html2canvas.js"></script>
     <script src="js/domToImage.js"></script>
 </head>
 <body>
@@ -17,7 +16,7 @@
                 <div class="content">
                     <h1>Caboodle Tech Application Branding</h1>
                     <p id="intro">
-                        This application allows users to easily create the branding for a Caboodle Tech Inc module or application. Badges for Caboodle Tech Inc modules and applications have a unique identity that starts with a mono-space font (Roboto) for all text within the badge and a periodic table inspired square cell layout. The square badge has a thick border surrounding it. Inside the badge in the upper left and right are date markers comprised of a letter and four digit year, where the letter preceding the year is always an uppercase letter in the range A - L representing the month respectively; A = January ... L = December. The upper left date is when the module or application was first introduced. The upper right is when the module or application was last updated. Centered in the upper middle of the badge is a two or three letter acronym representing the module or applications full name. Only the first letter of this acronym is uppercase following the style most common on periodic tables. The lower middle of the badge is the applications full or abbreviated name cut down to two lines of text maximum. Centered at the bottom of the badge is the module or applications current version in one of three formats. Valid version values are "Alpha: " followed by a whole number, "Beta: " followed by a whole number, or a semantic versioning number in the pattern of X.Y.Z where X, Y, and Z are non-negative integers that do not contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version; each element increases numerically for each module or application individually.
+                        This application allows users to easily create the branding for a Caboodle Tech Inc module or application. Badges for Caboodle Tech Inc modules and applications have a unique identity that include a mono-space font (Roboto) for all text within the badge and a periodic table inspired square cell layout. The square badge has a thick border surrounding it. Inside the badge in the upper left and right are date markers comprised of a letter and four digit year, where the letter preceding the year is always an uppercase letter in the range A - L representing the month respectively; A = January ... L = December. The upper left date is when the module or application was first introduced. The upper right is when the module or application was last updated. Centered in the upper middle of the badge is a two or three letter acronym representing the module or applications full name. Only the first letter of this acronym is uppercase following the style most common on periodic tables. The lower middle of the badge is the applications full or abbreviated name cut down to two lines of text maximum. Centered at the bottom of the badge is the module or applications current version in one of three formats. Valid version values are "Alpha: " followed by a whole number, "Beta: " followed by a whole number, or a semantic versioning number in the pattern of X.Y.Z where X, Y, and Z are non-negative integers that do not contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version; each element increases numerically for each module or application individually.
                     </p>
                 </div>
             </div>
@@ -30,7 +29,7 @@
 To exclude a word from being used to form the module or application acronym place it inside brackets. For example "Caboodle [Tech] App Branding" would ignore the word Tech and create the acronym of Cab.
                     </p>
                     <p>
-                        Any version number with the pattern 0.0.# will be considered an Alpha release, a pattern of 0.#.0 will be considered a Beta release, and the patter of 1.0.0+ will be considered a production release.
+                        Any version number with the pattern 0.0.# will be considered an Alpha release, a pattern of 0.#.0 will be considered a Beta release, and the pattern of 1.0.0+ will be considered a production release.
                     </p>
                 </div>
             </div>
@@ -43,7 +42,7 @@ To exclude a word from being used to form the module or application acronym plac
                                 <label>Application Name:</label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Application Name" id="name" value="Test Name">
+                                <input type="text" placeholder="Application Name" id="name">
                             </td>
                         </tr>
                         <tr>
@@ -53,7 +52,7 @@ To exclude a word from being used to form the module or application acronym plac
                             <td>
                                 <select id="cmonth">
                                     <option value="">Month</option>
-                                    <option value="A" selected>January</option>
+                                    <option value="A">January</option>
                                     <option value="B">February</option>
                                     <option value="C">March</option>
                                     <option value="D">April</option>
@@ -66,7 +65,7 @@ To exclude a word from being used to form the module or application acronym plac
                                     <option value="K">Novermber</option>
                                     <option value="L">December</option>
                                 </select>
-                                <input type="text" placeholder="Year" id="cyear" value="2018">
+                                <input type="text" placeholder="Year" id="cyear">
                             </td>
                         </tr>
                         <tr>
@@ -87,9 +86,9 @@ To exclude a word from being used to form the module or application acronym plac
                                     <option value="I">September</option>
                                     <option value="J">October</option>
                                     <option value="K">Novermber</option>
-                                    <option value="L" selected>December</option>
+                                    <option value="L">December</option>
                                 </select>
-                                <input type="text" placeholder="Year" id="uyear" value="2019">
+                                <input type="text" placeholder="Year" id="uyear">
                             </td>
                         </tr>
                         <tr>
@@ -97,7 +96,7 @@ To exclude a word from being used to form the module or application acronym plac
                                 <label>Version:</label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Version" id="version" value="0.0.">
+                                <input type="text" placeholder="Version" id="version">
                             </td>
                         </tr>
                     </table>
@@ -116,7 +115,7 @@ To exclude a word from being used to form the module or application acronym plac
                             <span id="html-initials">Cab</span>
                             <span id="html-name">Caboodle Tech App Branding</span>
                         </div>
-                        <span id="html-version">Alpha: 0.0.1</span>
+                        <span id="html-version">Beta: 1</span>
                     </div>
                 </div>
             </div>
@@ -144,7 +143,7 @@ To exclude a word from being used to form the module or application acronym plac
                             <span id="html-initials-black">Cab</span>
                             <span id="html-name-black">Caboodle Tech App Branding</span>
                         </div>
-                        <span id="html-version-black">Alpha: 0.0.1</span>
+                        <span id="html-version-black">Beta: 1</span>
                     </div>
                 </div>
             </div>

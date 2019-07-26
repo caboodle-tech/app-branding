@@ -19,18 +19,9 @@
 
 }
 
-h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-}
-
-.center {
-    text-align: center;
-}
-
 body {
 	font-family: "roboto_monoregular", Helvetica, Arial, sans-serif;
 	font-size: 62.5%;
-    background-color: aquamarine;
 	text-align: left;
 }
 
@@ -40,6 +31,14 @@ html, body {
 	width: 100%;
 	height: 100%;
     text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
 }
 
 #name  {
