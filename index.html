@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/app-branding.js"></script>
     <script src="js/html2canvas.js"></script>
+    <script src="js/domToImage.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -42,7 +43,7 @@ To exclude a word from being used to form the module or application acronym plac
                                 <label>Application Name:</label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Application Name" id="name">
+                                <input type="text" placeholder="Application Name" id="name" value="Test Name">
                             </td>
                         </tr>
                         <tr>
@@ -52,7 +53,7 @@ To exclude a word from being used to form the module or application acronym plac
                             <td>
                                 <select id="cmonth">
                                     <option value="">Month</option>
-                                    <option value="A">January</option>
+                                    <option value="A" selected>January</option>
                                     <option value="B">February</option>
                                     <option value="C">March</option>
                                     <option value="D">April</option>
@@ -65,7 +66,7 @@ To exclude a word from being used to form the module or application acronym plac
                                     <option value="K">Novermber</option>
                                     <option value="L">December</option>
                                 </select>
-                                <input type="text" placeholder="Year" id="cyear">
+                                <input type="text" placeholder="Year" id="cyear" value="2018">
                             </td>
                         </tr>
                         <tr>
@@ -86,9 +87,9 @@ To exclude a word from being used to form the module or application acronym plac
                                     <option value="I">September</option>
                                     <option value="J">October</option>
                                     <option value="K">Novermber</option>
-                                    <option value="L">December</option>
+                                    <option value="L" selected>December</option>
                                 </select>
-                                <input type="text" placeholder="Year" id="uyear">
+                                <input type="text" placeholder="Year" id="uyear" value="2019">
                             </td>
                         </tr>
                         <tr>
@@ -96,16 +97,17 @@ To exclude a word from being used to form the module or application acronym plac
                                 <label>Version:</label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Version" id="version">
+                                <input type="text" placeholder="Version" id="version" value="0.0.">
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
+        <!-- Orange Badge (Primary) -->
         <div class="row">
             <div class="span-4">
-                <div class="content center">
+                <div class="content center grow">
                     <h3>HTML Template</h3>
                     <div id="html-badge">
                         <span id="html-cdate">A2019</span>
@@ -119,15 +121,58 @@ To exclude a word from being used to form the module or application acronym plac
                 </div>
             </div>
             <div class="span-4">
-                <div class="content center">
-                    <h3>PNG (Canvas) Badge</h3>
+                <div class="content center grow">
+                    <h3>PNG Badge</h3>
                     <div id="canvas-brand"></div>
                 </div>
             </div>
             <div class="span-4">
-                <div class="content center">
+                <div class="content center grow">
                     <h3>SVG Badge</h3>
                     <div id="svg-brand"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Black Badge -->
+        <div class="row">
+            <div class="span-4">
+                <div class="content center grow">
+                    <div id="html-badge-black">
+                        <span id="html-cdate-black">A2019</span>
+                        <span id="html-udate-black">C2019</span>
+                        <div id="html-center-black">
+                            <span id="html-initials-black">Cab</span>
+                            <span id="html-name-black">Caboodle Tech App Branding</span>
+                        </div>
+                        <span id="html-version-black">Alpha: 0.0.1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="span-4">
+                <div class="content center grow">
+                    <div id="canvas-brand-black"></div>
+                </div>
+            </div>
+            <div class="span-4">
+                <div class="content center grow">
+                    <div id="svg-brand-black"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-4">
+                <div class="content">
+                    <br>
+                </div>
+            </div>
+            <div class="span-4">
+                <div class="content center grow">
+                    <br>
+                </div>
+            </div>
+            <div class="span-4">
+                <div class="content center grow">
+                    <br>
                 </div>
             </div>
         </div>
