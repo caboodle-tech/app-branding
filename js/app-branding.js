@@ -101,15 +101,21 @@ var AppBranding = (function(){
                 var name = elems.form['name'].value;
                 var tmpInitials = name;
                 tmpInitials = tmpInitials.replace(/\[[^)]*\]/g, '');
-                tmpInitials.split(' ');
+                tmpInitials = tmpInitials.split(' ');
+                console.log( tmpInitials );
                 var initials = '';
+                var counter = 0;
                 for( var x = 0; x < tmpInitials.length; x++ ){
-                    if( x > 2 ){
+                    if( counter > 2 ){
                         break;
                     }
-                    initials += tmpInitials[x][0];
+                    if( tmpInitials[x][0] ){
+                        initials += tmpInitials[x][0];
+                        counter++;
+                    }
                 }
                 initials = initials.toLowerCase();
+                console.log( initials );
                 initials = initials.charAt(0).toUpperCase() + initials.slice(1);
                 name = name.replace(/\[|\]/g, '');
                 var umonth = elems.form['umonth'].value;
